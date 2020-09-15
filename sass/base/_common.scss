@@ -1,0 +1,123 @@
+html {
+  box-sizing: border-box;
+  // outline: 1px solid red;
+  // width: 1600px;
+
+  @include for-size(tablet-portrait) {
+    min-width: 480px;
+  }
+  @include for-size(tablet-landscape) {
+    min-width: 768px;
+  }
+  @include for-size(desktop) {
+    max-width: 1600px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  background-color: #ffffff;
+  color: $primery-text-color;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  // outline: 1px solid red;
+
+  @include for-size(tablet-portrait) {
+    width: 480px;
+  }
+  @include for-size(tablet-landscape) {
+    width: 768px;
+  }
+  @include for-size(desktop) {
+    width: 1200px;
+  }
+}
+
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.section {
+  padding-bottom: 60px;
+
+  @include for-size(tablet-portrait) {
+    padding-bottom: 60px;
+  }
+  @include for-size(tablet-landscape) {
+    padding-bottom: 60px;
+  }
+  @include for-size(desktop) {
+    padding-bottom: 94px;
+  }
+}
+
+.section.drop {
+  @include for-size(tablet-portrait) {
+    display: none;
+  }
+  @include for-size(tablet-only) {
+    display: none;
+  }
+  @include for-size(desktop) {
+    display: flex;
+  }
+}
+
+.section .section-title {
+  margin-top: 0;
+  // margin-bottom: 50px;
+  font-weight: bold;
+  // font-size: 36px;
+  // line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @include for-size(tablet-portrait) {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+  @include for-size(tablet-only) {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+}

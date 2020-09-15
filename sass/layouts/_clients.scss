@@ -1,0 +1,150 @@
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+
+  @include for-size(tablet-portrait) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include for-size(tablet-landscape) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include for-size(desktop) {
+    display: flex;
+  }
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 90px;
+
+  @include for-size(tablet-portrait) {
+    width: 210px;
+    height: 90px;
+  }
+  @include for-size(tablet-landscape) {
+    width: 226px;
+    height: 90px;
+  }
+  @include for-size(desktop) {
+    width: 170px;
+    height: 90px;
+  }
+}
+
+.clients-list:not(:last-child) {
+  margin-bottom: 30px;
+
+  @include for-size(desktop) {
+    margin-right: 30px;
+  }
+}
+
+.clients-list:not(:nth-child(3n)) {
+  @include for-size(tablet-landscape) {
+    margin-right: 30px;
+  }
+}
+
+.clients-list:nth-child(-n + 3) {
+  @include for-size(tablet-landscape) {
+    margin-bottom: 30px;
+  }
+}
+
+.clients-list:nth-child(2n + 1) {
+  @include for-size(tablet-portrait) {
+    margin-right: 30px;
+  }
+}
+
+.clients-list:nth-child(3n + 3) {
+  @include for-size(tablet-landscape) {
+    margin-right: 0;
+  }
+}
+
+.clients-list:nth-child(4) {
+  @include for-size(tablet-landscape) {
+    margin-bottom: 0;
+  }
+}
+
+.clients-list:nth-child(5) {
+  @include for-size(tablet-portrait) {
+    margin-bottom: 0;
+  }
+}
+
+.clients-list:not(:last-child) {
+  @include for-size(desktop) {
+    margin-right: 30px;
+  }
+}
+
+.clients-list:nth-child(-n + 3) {
+  @include for-size(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.logo-link {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  // width: 170px;
+  // height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include for-size(mobile-only) {
+    width: 210px;
+    height: 90px;
+  }
+  @include for-size(tablet-landscape) {
+    width: 226px;
+    height: 90px;
+  }
+  @include for-size(desktop) {
+    width: 170px;
+    height: 90px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    fill: $changing-text-color;
+  }
+}
+
+.logo-1 {
+  display: flex;
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
+.clients-padding {
+  // padding-top: 94px;
+
+  @include for-size(mobile-only) {
+    padding-top: 60px;
+  }
+  @include for-size(tablet-landscape) {
+    padding-top: 60px;
+  }
+  @include for-size(desktop) {
+    padding-top: 94px;
+  }
+}

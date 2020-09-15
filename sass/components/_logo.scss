@@ -1,0 +1,31 @@
+.logo {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: start;
+  // margin-right: 85px;
+  color: #000000;
+  text-decoration: none;
+  font-family: $logo-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+
+  @include for-size(tablet-portrait) {
+  }
+  @include for-size(tablet-landscape) {
+    margin-right: 85px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  @include for-size(desktop) {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 31px;
+  }
+}
+
+.first-logo {
+  color: $changing-text-color;
+}

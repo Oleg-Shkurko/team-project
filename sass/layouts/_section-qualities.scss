@@ -1,0 +1,142 @@
+.section .section-qualities {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0;
+
+  @include for-size(tablet-portrait) {
+    display: block;
+  }
+  @include for-size(tablet-landscape) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include for-size(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.qualities-item {
+  //width: calc((100% - 30px * 3) / 4);
+  // height: 251px;
+
+  @include for-size(mobile-only) {
+    width: calc(100%);
+    // height: 226px;
+  }
+  @include for-size(tablet-landscape) {
+    width: 354px;
+    //height: 251px;
+  }
+  @include for-size(desktop) {
+    width: calc((100% - 30px * 3) / 4);
+    //height: 251px;
+  }
+}
+
+.qualities-item:not(:last-child) {
+  /*margin-right: 30px;*/
+
+  @include for-size(mobile-only) {
+    margin-bottom: 30px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 30px;
+  }
+}
+
+.qualities-item:nth-child(2n + 1) {
+  @include for-size(tablet-landscape) {
+    margin-right: 30px;
+  }
+}
+
+.qualities-item:nth-child(-n + 2) {
+  @include for-size(tablet-landscape) {
+    margin-bottom: 30px;
+    height: 251px;
+  }
+  @include for-size(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.qualities-item.details::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-color: #f5f4fa;
+  background-image: url(../image/antenna-1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.qualities-item.punctuality::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-color: #f5f4fa;
+  background-image: url(../image/clock-1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.qualities-item.planning::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-color: #f5f4fa;
+  background-image: url(../image/diagram-1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.qualities-item.technology::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-color: #f5f4fa;
+  background-image: url(../image/astronaut-1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.section .section-qualities h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.section .section-qualities p {
+  margin-top: 0;
+  margin-bottom: 0;
+  align-items: start;
+  color: $secondary-text-color;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+.qualities-padding {
+  padding-top: 60px;
+
+  @include for-size(tablet-portrait) {
+    padding-top: 60px;
+  }
+  @include for-size(tablet-landscape) {
+    padding-top: 60px;
+  }
+  @include for-size(desktop) {
+    padding-top: 94px;
+  }
+}
